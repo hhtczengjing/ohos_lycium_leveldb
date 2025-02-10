@@ -2,6 +2,7 @@
 
 ROOT_DIR=$(cd "$(dirname "$0")"; pwd)
 NAME="leveldb_1_23"
+LIB_NAME="leveldb"
 
 export OHOS_SDK="$HOME/ohos/command-line-tools/sdk/default/openharmony"
 
@@ -22,5 +23,5 @@ archs=("armeabi-v7a" "arm64-v8a" "x86_64")
 for arch in ${archs[@]}
 do
 	mkdir -p $ROOT_DIR/libs/$arch
-    cp $ROOT_DIR/tpc_c_cplusplus/lycium/usr/$NAME/$arch/lib/*.a $ROOT_DIR/libs/$arch
+    cp $ROOT_DIR/tpc_c_cplusplus/lycium/usr/$LIB_NAME/$arch/lib/*.a $ROOT_DIR/libs/$arch
 done
